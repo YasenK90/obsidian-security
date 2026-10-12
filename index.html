@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0d13" />
+    <meta name="description" content="OBSIDIAN continuously discovers exposed assets, misconfigurations, and forgotten infrastructure before someone else does." />
+    <title>OBSIDIAN — See your perimeter clearly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Obsidian home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>OBSIDIAN<span class="brand-period">.</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#platform">Platform</a>
+        <a href="#exposure">Exposure map</a>
+        <a href="#approach">Approach</a>
+      </nav>
+      <div class="header-actions">
+        <a class="text-link header-login" href="#exposure">View demo <span aria-hidden="true">↗</span></a>
+        <button class="button button-small button-light" data-open-dialog>Request a walkthrough <span aria-hidden="true">↗</span></button>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a href="#platform">Platform</a>
+        <a href="#exposure">Exposure map</a>
+        <a href="#approach">Approach</a>
+        <button class="button button-light" data-open-dialog>Request a walkthrough <span aria-hidden="true">↗</span></button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-wrap">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span> EXTERNAL ATTACK SURFACE MANAGEMENT</div>
+          <h1>The internet is your perimeter.<br /><span class="accent">Know every inch.</span></h1>
+          <p class="hero-lede">Discover exposed assets, risky configurations, and forgotten infrastructure before someone else does.</p>
+          <div class="hero-actions">
+            <a class="button button-lime" href="#exposure">Explore the live demo <span aria-hidden="true">↘</span></a>
+            <a class="button button-outline" href="#platform">How it works <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><span class="note-line"></span><span>Continuous discovery. Clear priorities. Less guesswork.</span></div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Illustration of an attack surface dashboard using sample data">
+          <div class="visual-topline"><span>OBS / SURFACE MAP</span><span class="demo-chip"><span class="status-dot"></span> SAMPLE ENVIRONMENT</span></div>
+          <div class="surface-visual">
+            <div class="visual-grid" aria-hidden="true"></div>
+            <div class="radar-rings" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <svg class="network-lines" viewBox="0 0 560 400" role="img" aria-label="Connected discovered internet assets">
+              <defs>
+                <linearGradient id="lineGlow" x1="0" x2="1"><stop offset="0" stop-color="#5af5b8" stop-opacity=".08"/><stop offset=".55" stop-color="#5af5b8" stop-opacity=".85"/><stop offset="1" stop-color="#5af5b8" stop-opacity=".12"/></linearGradient>
+              </defs>
+              <g fill="none" stroke="url(#lineGlow)" stroke-width="1.3">
+                <path d="M280 190 L170 100 L82 152 L104 262 L196 314 L280 190 L386 98 L470 148 L456 268 L356 312 L280 190"/>
+                <path d="M170 100 L196 314 M82 152 L280 190 M104 262 L356 312 M386 98 L356 312 M470 148 L280 190 M456 268 L196 314" stroke-dasharray="3 7"/>
+                <path d="M280 190 L280 52 M280 190 L510 205 M280 190 L48 224 M280 190 L282 366" stroke-opacity=".3" stroke-dasharray="2 8"/>
+              </g>
+              <g class="node node-core"><circle cx="280" cy="190" r="29"/><circle cx="280" cy="190" r="18"/><rect x="272" y="182" width="16" height="16" rx="3"/></g>
+              <g class="node node-good"><circle cx="170" cy="100" r="8"/><circle cx="386" cy="98" r="8"/><circle cx="196" cy="314" r="8"/></g>
+              <g class="node node-risk"><circle cx="82" cy="152" r="8"/><circle cx="470" cy="148" r="8"/><circle cx="456" cy="268" r="8"/></g>
+              <g class="node node-muted"><circle cx="104" cy="262" r="5"/><circle cx="356" cy="312" r="5"/><circle cx="280" cy="52" r="5"/><circle cx="510" cy="205" r="5"/><circle cx="48" cy="224" r="5"/><circle cx="282" cy="366" r="5"/></g>
+            </svg>
+            <div class="node-label label-core"><span class="tiny-square"></span> ACME CORP <small>ROOT DOMAIN</small></div>
+            <div class="node-label label-left"><span class="node-marker marker-risk"></span> api.acme.io <small>EXPOSED SERVICE</small></div>
+            <div class="node-label label-right"><span class="node-marker marker-risk"></span> staging.acme.io <small>PUBLIC STAGING</small></div>
+            <div class="node-label label-bottom"><span class="node-marker marker-good"></span> cdn.acme.io <small>VERIFIED ASSET</small></div>
+            <div class="scan-sweep" aria-hidden="true"></div>
+            <div class="visual-coordinates mono">37.7749° N&nbsp;&nbsp; 122.4194° W <span>DISCOVERY ACTIVE</span></div>
+          </div>
+          <div class="visual-bottomline"><span>ASSET RELATIONSHIP GRAPH</span><span>UPDATED JUST NOW <i class="pulse-dot"></i></span></div>
+        </div>
+        <div class="hero-index mono"><span>01 — FIND THE UNKNOWN</span><span>SCROLL TO EXPLORE&nbsp; ↓</span></div>
+      </section>
+
+      <section class="signal-strip" aria-label="Platform principles">
+        <div class="signal-strip-inner">
+          <span><i class="strip-dot"></i> CONTINUOUS ASSET DISCOVERY</span><span class="strip-divider">/</span>
+          <span><i class="strip-dot"></i> CONTEXTUAL RISK SCORING</span><span class="strip-divider">/</span>
+          <span><i class="strip-dot"></i> ACTIONABLE EXPOSURE INTELLIGENCE</span>
+        </div>
+      </section>
+
+      <section class="platform-section section-wrap section-pad" id="platform">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow"><span class="eyebrow-number">01</span> BUILT FOR THE REAL INTERNET</div><h2>Visibility is a<br /><span class="accent">security control.</span></h2></div>
+          <p class="section-intro">Your infrastructure changes every day. New subdomains appear, old services stay online, and small misconfigurations become open doors. OBSIDIAN connects those dots.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <div class="capability-head"><span class="card-index mono">CAP. 01</span><span class="line-icon icon-discover" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <h3>Find every asset.</h3><p>Map domains, subdomains, IPs, certificates, and internet-facing services—even when nobody remembers creating them.</p>
+            <div class="mini-domain-map" aria-hidden="true"><span class="domain-pill root">acme.io</span><span class="domain-branch branch-a">app.acme.io</span><span class="domain-branch branch-b">dev.acme.io</span><span class="domain-branch branch-c">api.acme.io</span><span class="branch-line line-a"></span><span class="branch-line line-b"></span><span class="branch-line line-c"></span></div>
+          </article>
+          <article class="capability-card reveal">
+            <div class="capability-head"><span class="card-index mono">CAP. 02</span><span class="line-icon icon-priority" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <h3>Know what matters.</h3><p>Prioritize reachable, exploitable exposure with context—not another endless queue of alerts without a next step.</p>
+            <div class="risk-bars" aria-label="Illustrative risk priority levels"><div><span>CRITICAL</span><i><b style="width:22%"></b></i><em>02</em></div><div><span>HIGH</span><i><b style="width:58%"></b></i><em>07</em></div><div><span>MEDIUM</span><i><b style="width:80%"></b></i><em>14</em></div></div>
+          </article>
+          <article class="capability-card reveal">
+            <div class="capability-head"><span class="card-index mono">CAP. 03</span><span class="line-icon icon-resolve" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <h3>Close the loop.</h3><p>Give each exposure an owner, an evidence trail, and a clear status so remediation doesn't disappear into chat.</p>
+            <div class="resolution-list"><div><span class="check-small">✓</span><span>Certificate expires soon</span><em>Assigned</em></div><div><span class="check-small">✓</span><span>Debug endpoint exposed</span><em class="resolved">Resolved</em></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="exposure-section section-pad" id="exposure">
+        <div class="section-wrap">
+          <div class="exposure-heading reveal"><div><div class="eyebrow"><span class="eyebrow-number">02</span> EXPOSURE EXPLORER</div><h2>Meet your<br /><span class="accent">unknown unknowns.</span></h2></div><div class="exposure-heading-side"><span class="sample-note"><i class="status-dot"></i> INTERACTIVE DEMO · SIMULATED DATA</span><p>Explore a sample environment, filter findings by severity, and run a simulated scan. No external systems are contacted.</p></div></div>
+          <div class="explorer-window reveal">
+            <div class="explorer-topbar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><div class="explorer-breadcrumb mono"><span>WORKSPACE</span><b>/</b><span>ACME CORP</span><b>/</b><strong>EXPOSURES</strong></div><div class="window-env mono"><span class="pulse-dot"></span> DEMO ENV</div></div>
+            <div class="explorer-content">
+              <aside class="explorer-sidebar" aria-label="Demo navigation"><div class="workspace-label">WORKSPACE <span>⌄</span></div><div class="workspace-name"><span class="workspace-avatar">A</span><span>Acme Corporation<small>acme.example</small></span><span class="chevron">↗</span></div><div class="side-nav-label">MONITOR</div><a href="#exposure" class="side-nav-item"><span class="side-nav-icon grid-icon">▦</span>Overview</a><a href="#asset-table" class="side-nav-item active"><span class="side-nav-icon">◎</span>Exposures <span class="side-count" id="side-count">23</span></a><a href="#asset-table" class="side-nav-item"><span class="side-nav-icon">⌘</span>Assets</a><a href="#approach" class="side-nav-item"><span class="side-nav-icon">↗</span>Activity log</a><div class="sidebar-bottom"><div class="online-state"><span class="pulse-dot"></span> Monitoring active</div><div class="sidebar-help">Sample workspace · All data is fictional</div></div></aside>
+              <div class="explorer-main">
+                <div class="explorer-main-header"><div><div class="mono tiny-label">MONITOR / EXPOSURES</div><h3>Exposure overview <span class="live-label"><i></i> LIVE DEMO</span></h3><p>Track what is visible from outside your perimeter.</p></div><button class="button button-lime button-scan" id="run-scan"><span class="scan-button-icon">↻</span> Run sample scan</button></div>
+                <div class="metrics-grid" id="metrics-grid">
+                  <div class="metric-card"><div class="metric-label">Discovered assets <span>↗</span></div><strong id="metric-assets">128</strong><div class="metric-foot"><span class="metric-good">+4</span> this week</div><div class="metric-spark spark-green" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="metric-card"><div class="metric-label">Open exposures <span>↗</span></div><strong id="metric-open">23</strong><div class="metric-foot"><span class="metric-warn">3 new</span> in sample scan</div><div class="metric-spark spark-orange" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="metric-card score-card"><div class="metric-label">Surface risk score <span>ⓘ</span></div><div class="score-value"><strong id="metric-score">31</strong><span>/ 100</span><svg viewBox="0 0 100 58" aria-label="Risk score gauge"><path d="M9 52 A41 41 0 0 1 91 52"/><path class="gauge-active" d="M9 52 A41 41 0 0 1 91 52"/></svg></div><div class="metric-foot"><span class="metric-good">↓ 8 pts</span> vs. last month</div></div>
+                </div>
+                <div class="table-panel" id="asset-table">
+                  <div class="table-head"><div><h4>Open exposures <span class="table-count" id="finding-count">23</span></h4><p>Prioritized findings across discovered assets</p></div><div class="table-controls"><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="finding-search" placeholder="Search findings" aria-label="Search findings" /></label><button class="filter-menu-button" id="filter-menu-button" aria-expanded="false" aria-controls="severity-filters">Filter <span>☷</span></button></div></div>
+                  <div class="severity-filters" id="severity-filters" role="group" aria-label="Filter by severity"><button class="filter-chip active" data-filter="All" aria-pressed="true">All <span id="chip-all-count">23</span></button><button class="filter-chip" data-filter="Critical" aria-pressed="false"><i class="severity-dot critical"></i> Critical <span id="chip-critical-count">02</span></button><button class="filter-chip" data-filter="High" aria-pressed="false"><i class="severity-dot high"></i> High <span id="chip-high-count">07</span></button><button class="filter-chip" data-filter="Medium" aria-pressed="false"><i class="severity-dot medium"></i> Medium <span id="chip-medium-count">14</span></button></div>
+                  <div class="table-scroll"><table class="findings-table"><thead><tr><th>FINDING</th><th>ASSET</th><th>SEVERITY</th><th>STATUS</th><th aria-label="Details"></th></tr></thead><tbody id="findings-body">
+                    <tr data-severity="Critical" data-search="exposed admin panel admin.acme.example access control"><td><span class="finding-symbol critical-symbol">!</span><span class="finding-name">Exposed admin panel<small>Access control · OBS-0021</small></span></td><td><code>admin.acme.example</code></td><td><span class="severity-pill critical-pill">Critical</span></td><td><span class="status-tag status-open"><i></i> Open</span></td><td><button class="row-more" aria-label="View exposed admin panel details" data-finding="Exposed admin panel">↗</button></td></tr>
+                    <tr data-severity="High" data-search="expired tls certificate api.acme.example certificate"><td><span class="finding-symbol high-symbol">↗</span><span class="finding-name">Expired TLS certificate<small>Certificate · OBS-0018</small></span></td><td><code>api.acme.example</code></td><td><span class="severity-pill high-pill">High</span></td><td><span class="status-tag status-triage"><i></i> Triaging</span></td><td><button class="row-more" aria-label="View expired TLS certificate details" data-finding="Expired TLS certificate">↗</button></td></tr>
+                    <tr data-severity="High" data-search="public staging environment staging.acme.example infrastructure"><td><span class="finding-symbol high-symbol">↗</span><span class="finding-name">Public staging environment<small>Infrastructure · OBS-0016</small></span></td><td><code>staging.acme.example</code></td><td><span class="severity-pill high-pill">High</span></td><td><span class="status-tag status-open"><i></i> Open</span></td><td><button class="row-more" aria-label="View public staging environment details" data-finding="Public staging environment">↗</button></td></tr>
+                    <tr data-severity="Medium" data-search="missing security headers www.acme.example web configuration"><td><span class="finding-symbol medium-symbol">·</span><span class="finding-name">Missing security headers<small>Web configuration · OBS-0014</small></span></td><td><code>www.acme.example</code></td><td><span class="severity-pill medium-pill">Medium</span></td><td><span class="status-tag status-open"><i></i> Open</span></td><td><button class="row-more" aria-label="View missing security headers details" data-finding="Missing security headers">↗</button></td></tr>
+                    <tr data-severity="Medium" data-search="dns record stale legacy.acme.example dns hygiene"><td><span class="finding-symbol medium-symbol">·</span><span class="finding-name">Stale DNS record<small>DNS hygiene · OBS-0011</small></span></td><td><code>legacy.acme.example</code></td><td><span class="severity-pill medium-pill">Medium</span></td><td><span class="status-tag status-resolved"><i></i> Resolved</span></td><td><button class="row-more" aria-label="View stale DNS record details" data-finding="Stale DNS record">↗</button></td></tr>
+                  </tbody></table></div>
+                  <div class="table-empty" id="table-empty" hidden><span>⌕</span><strong>No matching findings</strong><p>Try another keyword or severity.</p><button class="text-link" id="reset-filters">Reset filters ↺</button></div>
+                  <div class="table-footer"><span id="table-footer-text">Showing 5 sample findings of 23 open exposures</span><button class="text-link" id="show-all-findings">View all findings <span aria-hidden="true">→</span></button></div>
+                </div>
+                <div class="demo-status" id="demo-status" role="status" aria-live="polite"><span class="status-check">✓</span><span>Sample environment loaded. No external systems contacted.</span><button aria-label="Dismiss message" id="dismiss-status">×</button></div>
+              </div>
+            </div>
+          </div>
+          <p class="demo-disclaimer"><span>ⓘ</span> This is a fictional interactive demo. It does not scan, contact, or assess real infrastructure.</p>
+        </div>
+      </section>
+
+      <section class="approach-section section-wrap section-pad" id="approach">
+        <div class="approach-heading reveal"><div class="eyebrow"><span class="eyebrow-number">03</span> OUR OPERATING PRINCIPLE</div><h2>Less alert noise.<br /><span class="accent">More signal.</span></h2><p>Security teams don't need one more dashboard full of things they can't act on. They need the shortest path from unknown exposure to confident remediation.</p></div>
+        <div class="approach-steps">
+          <div class="approach-step reveal"><span class="step-number mono">01</span><div class="step-glyph glyph-rings" aria-hidden="true"><i></i><i></i><i></i></div><div><h3>Discover continuously</h3><p>Build a living inventory of what your organization exposes to the internet.</p></div><span class="step-arrow">↗</span></div>
+          <div class="approach-step reveal"><span class="step-number mono">02</span><div class="step-glyph glyph-crosshair" aria-hidden="true"><i></i><i></i></div><div><h3>Prioritize with context</h3><p>Connect a finding to the asset, service, and evidence that make it matter.</p></div><span class="step-arrow">↗</span></div>
+          <div class="approach-step reveal"><span class="step-number mono">03</span><div class="step-glyph glyph-check" aria-hidden="true">✓</div><div><h3>Move toward resolution</h3><p>Give the right person enough context to fix the issue—not just acknowledge it.</p></div><span class="step-arrow">↗</span></div>
+        </div>
+      </section>
+
+      <section class="closing-section">
+        <div class="closing-grid" aria-hidden="true"></div>
+        <div class="closing-inner section-wrap reveal"><div class="closing-kicker"><span class="status-dot"></span> START WITH VISIBILITY</div><h2>You can't protect<br />what you <span class="accent">can't see.</span></h2><p>Take a closer look at what your perimeter might be telling you.</p><button class="button button-lime" data-open-dialog>Request a walkthrough <span aria-hidden="true">↗</span></button><div class="closing-orbit" aria-hidden="true"><span></span><span></span><span></span><b>O</b></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-wrap"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>OBSIDIAN<span class="brand-period">.</span></span></a><span class="footer-note">A concept for a more visible internet.</span><div class="footer-links"><a href="#platform">Platform</a><a href="#exposure">Demo</a><a href="#top">Back to top ↑</a></div><span class="footer-copy mono">© 2026 OBSIDIAN · PORTFOLIO CONCEPT</span></footer>
+
+    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="dialog-title">
+      <form method="dialog" class="dialog-shell" id="walkthrough-form">
+        <div class="dialog-top"><div class="eyebrow"><span class="status-dot"></span> LET'S TALK SECURITY</div><button type="button" class="dialog-close" id="dialog-close" aria-label="Close dialog">×</button></div>
+        <h2 id="dialog-title">See your perimeter<br /><span class="accent">with fresh eyes.</span></h2><p class="dialog-intro">Tell us a little about your team. This demo form shows the interaction only; it won't send your details anywhere.</p>
+        <label class="form-label" for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required placeholder="Alex Morgan" />
+        <label class="form-label" for="contact-email">Work email</label><input id="contact-email" type="email" name="email" autocomplete="email" required placeholder="alex@company.com" />
+        <label class="form-label" for="contact-team">Team size</label><select id="contact-team" name="team" required><option value="" disabled selected>Select team size</option><option>1–10 people</option><option>11–50 people</option><option>51–200 people</option><option>201+ people</option></select>
+        <button class="button button-lime dialog-submit" type="submit">Request walkthrough <span aria-hidden="true">↗</span></button>
+        <p class="form-privacy">DEMO ONLY · NO INFORMATION IS SENT OR STORED</p>
+        <div class="form-success" id="form-success" hidden><span class="success-mark">✓</span><strong>You're on the list.</strong><p>Demo submitted successfully. No data has left this page.</p><button class="button button-outline" type="button" id="success-close">Back to the site</button></div>
+      </form>
+    </dialog>
+
+    <dialog class="finding-dialog" id="finding-dialog" aria-labelledby="finding-dialog-title"><div class="finding-dialog-content"><div class="dialog-top"><div class="eyebrow"><span class="eyebrow-number">FINDING DETAIL</span> SAMPLE RECORD</div><button type="button" class="dialog-close" id="finding-close" aria-label="Close finding details">×</button></div><span class="detail-severity severity-pill high-pill" id="detail-severity">High</span><h2 id="finding-dialog-title">Public staging environment</h2><p class="detail-asset" id="detail-asset">staging.acme.example</p><p class="detail-summary detail-record-summary">A fictional sample finding.</p><div class="detail-divider"></div><div class="detail-row"><span>Finding ID</span><strong id="detail-id">OBS-0016</strong></div><div class="detail-row"><span>First observed</span><strong>Today · 09:41 UTC</strong></div><div class="detail-row"><span>Suggested next step</span><strong>Restrict public access</strong></div><p class="detail-disclaimer">Illustrative sample data only. This finding is not a real assessment.</p></div></dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-icon">✓</span><span id="toast-message">Done</span><button id="toast-close" aria-label="Dismiss notification">×</button></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
