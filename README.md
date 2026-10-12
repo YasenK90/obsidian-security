@@ -2,6 +2,8 @@
 
 A responsive, dark editorial concept site for a fictional cybersecurity product. This portfolio piece intentionally combines a product-marketing page with an interactive security-dashboard demo.
 
+**Live demo:** https://yasenk90.github.io/obsidian-security/
+
 ## Run locally
 
 ```bash
